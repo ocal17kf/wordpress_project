@@ -38,7 +38,6 @@
 				    $query->the_post();
 				    $post_title = get_the_title();
 				    echo $post_title;
-				    //TODO: Show the buffet info
 				    echo "<br>";
 			    }
 			    break;
@@ -65,6 +64,18 @@
 		        the_content();
 		        ic_price_field();
 
-		        }
+		        }else if($type == "homelist"){
+
+		        ?>
+                <div class="dish">
+                    <div class="dish-image">
+			            <?php the_post_thumbnail('single_large'); ?>
+                    </div>
+                    <h1><?php the_title(); ?></h1>
+		            <?php
+		            the_content();
+		            ic_price_field();
+
+		            }
             ?>
         </div>
