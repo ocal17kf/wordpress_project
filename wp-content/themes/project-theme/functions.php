@@ -20,6 +20,26 @@ function add_dish_type_taxonomy(){
 add_action('init','add_dish_type_taxonomy');
 
 
+function add_homelist_taxonomy(){
+
+	//set the name of the taxonomy
+	$taxonomy = 'homelist';
+	//set the post types for the taxonomy
+	$object_type = 'homelist';
+
+
+	//define arguments to be used
+	$args = array(
+		'label'             => "Homelist",
+		'hierarchical'      => true
+	);
+
+	//call the register_taxonomy function
+	register_taxonomy($taxonomy, $object_type, $args);
+}
+add_action('init','add_homelist_taxonomy');
+
+
 function add_drink_type_taxonomy(){
 
 	//set the name of the taxonomy
@@ -85,6 +105,28 @@ function drink_post_init() {
 	);
 
 	register_post_type( 'drink', $args );
+}
+
+add_action( 'init', 'homelist_post_init' );
+
+function homelist_post_init() {
+
+	$labels = array(
+		'name'               => ( 'Homelist'),
+		'singular_name'      => ( 'Homelist'),
+
+	);
+
+	$args = array(
+
+		'labels'             => $labels,
+		'public'             => true,
+		'hierarchical'       => false,
+		'menu_icon'          => 'dashicons-portfolio',
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail')
+	);
+
+	register_post_type( 'homelist', $args );
 }
 
 add_action( 'init', 'gallery_post_init' );

@@ -27,8 +27,8 @@
 			    get_template_part('partials/gallery');
 			    break;
 
-		    case "Guest book":
-			    echo "A la carte";
+		    case "Homelist":
+			    get_template_part('partials/homelist');
 			    break;
 
 		    case "Home":
@@ -42,11 +42,6 @@
 				    echo "<br>";
 			    }
 			    break;
-
-		    case "About us":
-
-		        //TODO: Add google maps here
-			    break;
         }
     }else if($type == "dish"){
 	    ?>
@@ -59,6 +54,17 @@
                 the_content();
                 ic_price_field();
 
-            }
+            }else if($type == "drink"){
+            ?>
+            <div class="dish">
+                <div class="dish-image">
+			        <?php the_post_thumbnail('single_large'); ?>
+                </div>
+                <h1><?php the_title(); ?></h1>
+		        <?php
+		        the_content();
+		        ic_price_field();
+
+		        }
             ?>
         </div>

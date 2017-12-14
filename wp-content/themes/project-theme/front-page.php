@@ -22,5 +22,4 @@ get_template_part('partials/content');
 </footer>
 </body>
 
-
 </html>

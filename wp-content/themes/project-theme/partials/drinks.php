@@ -6,6 +6,7 @@ if(isset($_GET["filter"]) && !empty($_GET["filter"])){
 }else{
 	$taxonomy = get_terms(array( 'taxonomy' => ("drink_type"),'hide_empty' => 0, 'fields' => 'slugs' ));
 }
+
 $args = array( 'post_type' => 'drink', 'tax_query' => array( array( 'taxonomy' => 'drink_type','field' => 'slug','terms' => $taxonomy ) ) );
 $results = new WP_Query( $args );
 
@@ -48,6 +49,7 @@ $categories = get_terms(array( 'taxonomy' => ("drink_type"),'hide_empty' => 0));
 			?>
 		</ul>
 	</div>
+</div>
 	<div class="dishes">
 		<?php
 		if ( sizeof($results) == 0 ){
@@ -70,4 +72,4 @@ $categories = get_terms(array( 'taxonomy' => ("drink_type"),'hide_empty' => 0));
 
 		?>
 	</div>
-</div>
+
