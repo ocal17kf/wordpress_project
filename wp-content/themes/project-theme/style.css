@@ -1,0 +1,181 @@
+/*
+Theme Name: project-theme
+Author: Alejandro Oceja & George Eskeif
+Description: A theme to present creative work
+*/
+
+a.title{
+    text-decoration:none;
+    color: black;
+}
+
+
+
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:190px;
+    background:#6cf;
+
+}
+
+#hours-footer{
+    display: inline-block;
+    margin-left:15%;
+
+ }
+#book-footer{
+    display: inline-block;
+    margin-left:15%;
+}
+#address-footer{
+    display: inline-block;
+    margin-left:15%;
+}
+
+#navmenu{
+    display: inline-block;
+    float: right;
+    right: 20px;
+    margin-bottom: 50px;
+    width:50%;
+
+}
+#navmenu ul {
+    margin: 0;
+    padding: 0;
+
+}
+#navmenu li {
+    margin-left: 20px;
+    display: inline;
+    font-weight:bold;
+
+}
+
+#navmenu a {
+    text-decoration: none;
+    color: #000;
+    font-size:20px;
+}
+
+#tags {
+    display: inline-block;
+    margin-left: -40px;
+}
+
+#tags a{
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    background: lightgray;
+    padding:5px;
+}
+
+#tags li{
+    display: inline;
+    padding:5px;
+
+}
+
+.dishes {
+    display: inline-block;
+    float: right;
+    right: 20px;
+    margin-bottom: 50px;
+    width:60%;
+ }
+.carte {
+    display: inline-block;
+    float: left;
+}
+
+
+#filter {
+    margin-left:-20px;
+    display: inline-block;
+}
+
+#filter a{
+    font-weight:bold;
+    text-decoration: none;
+
+}
+
+#filter ul{
+     list-style-type: none;
+ }
+
+#filter li{
+    margin-top: 10px;
+    list-style-type: none;
+    margin-left:5px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery-left {
+     margin: 20px 20px 0 0;
+     border: 5px solid #333;
+     overflow: auto;
+     max-width:50%;
+ }
+
+.gallery-left-thumb {
+    float: left
+}
+.gallery-left-thumb img {
+    display: block
+}
+.gallery-left-content {
+    margin-left: 210px
+}
+
+.gallery-right {
+    margin: 20px 20px 0 0;
+    float: right;
+    border: 5px solid #333;
+    overflow: auto;
+    max-width:50%;
+}
+.gallery-right-thumb {
+    float: right
+}
+.gallery-right-thumb img {
+    display: block
+}
+.gallery-right-content {
+    margin-right: 210px
+}
+
+.dish{
+    margin-left:10%;
+    margin-top: 10%;
+
+}
+
+.dish-image{
+    float: right;
+    margin-right: 20%;
+
+}
+
+
+
+
+
